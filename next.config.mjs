@@ -10,12 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "primelabs-digital-templete-app-production.up.railway.app",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "primelabs-digital-template-app.vercel.app",
+        hostname: "primelabs-digital-template-app-production.up.railway.app",
         pathname: "**",
       },
     ],
