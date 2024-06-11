@@ -32,7 +32,7 @@ const canCreateReview: Access = async ({ req: { user }, req }) => {
 export const Reviews: CollectionConfig = {
   slug: "reviews",
   access: {
-    read: () => true, 
+    read: canCreateReview,
     create: canCreateReview,
     update: ({ req }) => req.user.role === "admin",
     delete: canCreateReview,
