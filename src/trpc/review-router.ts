@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { privateProcedure, router } from "./trpc";
+import { privateProcedure, publicProcedure, router } from "./trpc";
 import { getPayloadClient } from "../getPayload";
 import { TRPCError } from "@trpc/server";
 
@@ -51,7 +51,7 @@ export const reviewRouter = router({
       return review;
     }),
 
-  getReviewsForProduct: privateProcedure
+  getReviewsForProduct: publicProcedure
     .input(z.string())
     .query(async ({ input }) => {
       const productId = input;
