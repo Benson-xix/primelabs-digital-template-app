@@ -10,6 +10,8 @@ type CartContextType = {
     setCustomizeTemplate: React.Dispatch<React.SetStateAction<boolean>>;
     hostingTemplate: boolean;
     setHostingTemplate: React.Dispatch<React.SetStateAction<boolean>>;
+    isCartOpen: boolean;
+    setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
   };
 
   const CartContext = createContext<CartContextType>({
@@ -19,12 +21,15 @@ type CartContextType = {
     setCustomizeTemplate: () => {},
     hostingTemplate: false,
     setHostingTemplate: () => {},
+    isCartOpen: false,
+  setIsCartOpen: () => {},
   });
 
 export const CartProvider = ({ children }: React.PropsWithChildren) => {
   const [hasDeveloper, setHasDeveloper] = useState(false);
   const [customizeTemplate, setCustomizeTemplate] = useState(false);
   const [hostingTemplate, setHostingTemplate] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <CartContext.Provider
@@ -35,6 +40,8 @@ export const CartProvider = ({ children }: React.PropsWithChildren) => {
         setCustomizeTemplate,
         hostingTemplate,
         setHostingTemplate,
+        isCartOpen,
+        setIsCartOpen,
       }}
     >
       {children}
