@@ -31,6 +31,8 @@ const Cart = () => {
     setCustomizeTemplate,
     hostingTemplate,
     setHostingTemplate,
+    isCartOpen,
+    setIsCartOpen,
   } = useCartContext();
  
 
@@ -102,7 +104,7 @@ const Cart = () => {
 
 
   return (
-    <Sheet>
+    <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
       <SheetTrigger className="group -m-2 flex items-center p-2">
         <ShoppingCart
           aria-hidden="true"
