@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: "primelabs-digital-template-app-production.up.railway.app",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "qodebyte.com",
+        pathname: "**",
+      },
     ],
   },
 };
