@@ -18,6 +18,11 @@ const nextConfig = {
         hostname: "qodebyte.com",
         pathname: "**",
       },
+      {
+      protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+        pathname: "**",
+      }
     ],
   },
 };
