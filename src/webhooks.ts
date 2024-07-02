@@ -95,7 +95,7 @@ export const stripeWebhookHandler = async (
     })
     try {
         const data = await resend.emails.send({
-          from: 'PrimeLabs <primelabs-digital-templete-app-production.up.railway.app>',
+          from: 'support@<qodebyte.com>',
           to: [user.email],
           subject:
             'Thanks for your order! This is your receipt.',
