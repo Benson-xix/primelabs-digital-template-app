@@ -47,8 +47,8 @@ export const getPayloadClient = async ({
     cached.promise = payload.init({
       email: {
         transport: transporter,
-        fromAddress: "primelabs-digital-templete-app-production.up.railway.app",
-        fromName: 'PrimeLabs',
+        fromAddress: "qodebyte.com,
+        fromName: 'QodeByte',
       },
       secret: process.env.PAYLOAD_SECRET,
       local: initOptions?.express ? false : true,
