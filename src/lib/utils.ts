@@ -59,7 +59,7 @@ export function constructMetadata({
       creator: '',
     },
     icons,
-    metadataBase: new URL('https://primelabs-digital-templete-app-production.up.railway.app'),
+    metadataBase: new URL('https://qodebyte.com'),
     ...(noIndex && {
       robots: {
         index: false,
