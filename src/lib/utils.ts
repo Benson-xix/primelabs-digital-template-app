@@ -27,8 +27,8 @@ export function formatPrice(
 }
 
 export function constructMetadata({
-  title = 'PrimeLabs Digital Template assets ',
-  description = 'PrimeLabs is a marketplace for high-quality digital Templates.',
+  title = 'QodeByte Digital assets  ',
+  description = 'QodeByte is a marketplace for high-quality digital Templates.',
   image = '/QODEBYTE.png',
   icons = '/QODEBYTE.png',
   noIndex = false,
