@@ -13,7 +13,7 @@ export const Orders: CollectionConfig = {
   slug: "orders",
   admin: {
     useAsTitle: "Your orders",
-    description: "A summary of all your orders on Primelabs.",
+    description: "A summary of all your orders on QodeByte.",
   },
   access: {
     read: yourOwn,
