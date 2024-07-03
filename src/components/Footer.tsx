@@ -37,7 +37,7 @@ const Footer = () => {
                     Achieve your web developement dreams with us
                   </h3>
                   <p className="mt-2 text-sm text-gray-100 text-muted-foreground">
-                    here at primelabs you can get your dream web apps from us,
+                    here at QodeByte you can get your dream web apps from us,
                     templates that are easily customizable and will be delivered
                     immediately to you in your email and your user libary
                     <Link
