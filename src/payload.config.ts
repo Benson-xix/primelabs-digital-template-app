@@ -28,7 +28,7 @@ export default buildConfig({
     user: "users",
     bundler: webpackBundler(),
     meta: {
-        titleSuffix: "- PrimeLabs Template",
+        titleSuffix: "- QodeByte Digial World",
         favicon: "/QODEBYTE.png",
         ogImage: '/QODEBYTE.png'
     },
