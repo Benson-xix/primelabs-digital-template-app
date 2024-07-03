@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Icons = {
   logo: (props: LucideProps) => (
     <div {...(props as React.HTMLAttributes<HTMLDivElement>)}>
-      <Image src="/logo.png" alt="logo" width={100} height={100} priority />
+      <Image src="/QODEBYTE.png" alt="logo" width={100} height={100} priority />
     </div>
   ),
 };
