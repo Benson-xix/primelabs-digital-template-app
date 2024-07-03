@@ -29,8 +29,8 @@ export default buildConfig({
     bundler: webpackBundler(),
     meta: {
         titleSuffix: "- PrimeLabs Template",
-        favicon: "/logo.png",
-        ogImage: '/logo.png'
+        favicon: "/QODEBYTE.png",
+        ogImage: '/QODEBYTE.png'
     },
   },
   rateLimit: {
