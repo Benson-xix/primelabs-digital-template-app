@@ -29,8 +29,8 @@ export function formatPrice(
 export function constructMetadata({
   title = 'PrimeLabs Digital Template assets ',
   description = 'PrimeLabs is a marketplace for high-quality digital Templates.',
-  image = '/logo.png',
-  icons = '/logo.png',
+  image = '/QODEBYTE.png',
+  icons = '/QODEBYTE.png',
   noIndex = false,
 }: {
   title?: string
