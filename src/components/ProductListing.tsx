@@ -69,7 +69,7 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
 
           <Link
             href=""
-            className="bg-black mt-2 cursor-pointer  text-white md:w-1/3 w-1/2 rounded-lg py-2 lg:px-3 px-1  "
+            className="bg-black mt-2 cursor-pointer group/main  text-white lg:w-1/3 w-1/2 rounded-lg py-2 lg:px-3 px-1  "
           >
             preview
           </Link>
