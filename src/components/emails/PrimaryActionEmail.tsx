@@ -33,15 +33,15 @@ export const EmailTemplate  = ({actionLabel,
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`${process.env.NEXT_PUBLIC_SERVER_URL}/Newsletter-Prime.jpeg`}
+          src={`${process.env.NEXT_PUBLIC_SERVER_URL}/QODEBYTE.png`}
           width='150'
           height='150'
-          alt='PrimeLabs'
+          alt='QodeByte'
           style={logo}
         />
         <Text style={paragraph}>Hi there,</Text>
         <Text style={paragraph}>
-          Welcome to PrimeLabs, the marketplace for
+          Welcome to QodeByte, the marketplace for
           high quality digital Templates. Use the button below
           to {actionLabel}.
         </Text>
@@ -53,7 +53,7 @@ export const EmailTemplate  = ({actionLabel,
         <Text style={paragraph}>
           Best,
           <br />
-          The PrimeLabs team
+          The QodeByte team
         </Text>
         <Hr style={hr} />
         <Text style={footer}>
