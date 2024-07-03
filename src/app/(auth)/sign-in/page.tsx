@@ -79,7 +79,7 @@ const SignInPage  = () => {
           <div className="flex flex-col items-center space-y-2 text-center">
             <Icons.logo className="h-20 w-20" />
             <h1 className="text-2xl font-bold">
-              SignIn into Your PrimeLabs {isSeller ? 'seller ': ''}account
+              SignIn into Your QodeByte {isSeller ? 'seller ': ''}account
             </h1>
 
             <Link
