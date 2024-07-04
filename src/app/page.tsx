@@ -36,7 +36,7 @@ export default function Home() {
             <span className="text-blue-600">Digital Templates</span>.
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
-            Welcome to Prime Labs Digital Market Place. Every Template on our
+            Welcome to Qode Byte's Digital Market Place. Every Template on our
             platform is verified by our team to ensure they are of the highest
             quality standards and that they are easily integrated and
             customizable
