@@ -255,6 +255,12 @@ export const Products: CollectionConfig = {
         hidden: true,
       },
     },
+    {
+      name: "preview", 
+      label: "Preview URL",
+      type: "text",
+      required: false,
+    },
 
     {
       name: "reviews",
