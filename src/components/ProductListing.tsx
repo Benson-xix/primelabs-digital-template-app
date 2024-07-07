@@ -38,6 +38,8 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
     .map(({ image }) => (typeof image === "string" ? image : image.url))
     .filter(Boolean) as string[];
 
+   const previewUrl = product.preview || "";
+
   if (isVisible && product) {
     return (
       <div
@@ -67,8 +69,8 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
             Details
           </Link>
 
-          <Link
-            href=""
+            <Link
+            href={previewUrl}
             className="bg-black mt-2 cursor-pointer group/main  text-white lg:w-1/3 w-1/2 rounded-lg py-2 lg:px-3 px-1  "
           >
             preview
