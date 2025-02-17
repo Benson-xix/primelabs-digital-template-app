@@ -12,8 +12,7 @@
     "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles && yarn build:next",
     "start": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NODE_ENV=production node dist/server.js",
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
-    "lint": "next lint",
-    "postbuild": "apt-get update && apt-get install -y libvips-dev" 
+    "lint": "next lint"
   },
   "resolutions": {
     "cliui": "7.0.2"
