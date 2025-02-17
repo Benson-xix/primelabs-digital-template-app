@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "primelabs-digital-template-app-production.up.railway.app",
+        hostname: "primelabs-digital-template-app.onrender.com/p",
         pathname: "**",
       },
       {
