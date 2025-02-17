@@ -38,6 +38,9 @@ const start = async () => {
 
   app.post("/api/webhooks/stripe", webhookMiddleware, stripeWebhookHandler);
 
+   const mediaPath = path.join(__dirname, 'media');
+  app.use('/media', express.static(mediaPath));
+
   const payload = await getPayloadClient({
     initOptions: {
       express: app,
