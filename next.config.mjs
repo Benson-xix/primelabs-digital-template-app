@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "primelabs-digital-template-app.onrender.com/p",
+        hostname: "primelabs-digital-template-app.onrender.com",
         pathname: "**",
       },
       {
@@ -25,6 +25,11 @@ const nextConfig = {
       }
     ],
   },
+   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '', // update this if you use subpath routing
+    basePath: process.env.NEXT_PUBLIC_BASE_PATH || '', // update this if you use subpath routing
+    publicRuntimeConfig: {
+      staticFolder: '/media', // Or the correct path
+    },
 };
 
 export default nextConfig;
