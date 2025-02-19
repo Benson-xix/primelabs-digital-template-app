@@ -115,36 +115,36 @@ export interface Media {
   filename?: string | null;
   mimeType?: string | null;
   filesize?: number | null;
-   width?: number | null;
-   height?: number | null;
-   focalX?: number | null;
-   focalY?: number | null;
-  // sizes?: {
-  //   thumbnail?: {
-  //     url?: string | null;
-  //     width?: number | null;
-  //     height?: number | null;
-  //     mimeType?: string | null;
-  //     filesize?: number | null;
-  //     filename?: string | null;
-  //   };
-  //   card?: {
-  //     url?: string | null;
-  //     width?: number | null;
-  //     height?: number | null;
-  //     mimeType?: string | null;
-  //     filesize?: number | null;
-  //     filename?: string | null;
-  //   };
-  //   tablet?: {
-  //     url?: string | null;
-  //     width?: number | null;
-  //     height?: number | null;
-  //     mimeType?: string | null;
-  //     filesize?: number | null;
-  //     filename?: string | null;
-  //   };
-//  };
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    tablet?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
