@@ -99,9 +99,11 @@ export const reviewRouter = router({
 
       const review = existingReview.docs[0];
 
-      if (review.user !== user.id) {
-        throw new TRPCError({ code: "FORBIDDEN", message: "You are not allowed to update this review" });
-      }
+     if (typeof review.user === 'object' && review.user.id !== user.id) { // Check if it's an object first
+    throw new TRPCError({ code: "FORBIDDEN", message: "You are not allowed to update this review" });
+} else if (typeof review.user === 'string' && review.user !== user.id) {
+    throw new TRPCError({ code: "FORBIDDEN", message: "You are not allowed to update this review" });
+}
 
       const updatedReview = await payload.update({
         collection: "reviews",
