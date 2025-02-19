@@ -42,5 +42,19 @@ export default buildConfig({
   }),
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')
-  }
+  },
+   webpack: (config) => {  // <--- webpack config is HERE, inside buildConfig
+        return {
+            ...config,
+            resolve: {
+                fallback: {
+                    "stream": require.resolve("stream-browserify"),
+                    "url": require.resolve("url"),
+                    "querystring": require.resolve("querystring"),
+                    "path": require.resolve("path"),
+                    "fs": false, // Or require.resolve("fs") if absolutely needed
+                },
+            },
+        };
+    },
 });
