@@ -57,7 +57,8 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
           <p className="mt-1 font-medium text-sm text-gray-900">
             {formatPrice(product.price)}
           </p>
-          <Link
+           <div className="flex gap-3 w-full">
+              <Link
             className={cn(
               "invisible cursor-pointer group/main bg-blue-500 mt-2 text-white md:w-1/3 w-1/2 rounded-lg py-2 lg:px-3 px-1 ",
               {
@@ -75,6 +76,7 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
           >
             preview
           </Link>
+           </div>
         </div>
       </div>
     );
