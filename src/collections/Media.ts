@@ -22,7 +22,7 @@ const uploadToCloudinary: BeforeChangeHook = async ({ data }: { data: any }) => 
     try { fs.unlinkSync(data.file.path); } catch {}
     return {
       ...data,
-      cloudinaryUrl: result.secure_url,
+      url: result.secure_url,
       filename: result.public_id,
       mimeType: result.format,
       filesize: result.bytes,
@@ -91,7 +91,7 @@ export const Media: CollectionConfig = {
       },
     },
     {
-      name: "cloudinaryUrl",
+      name: "url",
       type: "text",
       required: false,
       admin: { readOnly: true },
