@@ -70,7 +70,6 @@ const start = async () => {
     })
   );
 
-  // Next.js fallback
   if (process.env.NEXT_BUILD) {
     app.listen(PORT, async () => {
       payload.logger.info("Next.js is building for production");
@@ -81,18 +80,23 @@ const start = async () => {
     return;
   }
 
-  nextApp.prepare().then(() => {
-    payload.logger.info("Next.js started");
+nextApp.prepare().then(() => {
+  payload.logger.info("Next.js started");
 
-    // Mount Next.js fallback AFTER Payload
-    app.all("*", (req, res) => nextHandler(req, res));
+  
+  if (payload.router) {
+    app.use(payload.router);
+  }
 
-    app.listen(PORT, () => {
-      payload.logger.info(
-        `Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`
-      );
-    });
+ 
+  app.all("*", (req, res) => nextHandler(req, res));
+
+  app.listen(PORT, () => {
+    payload.logger.info(
+      `Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`
+    );
   });
+});
 };
 
 start();
