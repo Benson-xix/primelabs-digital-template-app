@@ -1,36 +1,16 @@
 import { User } from "../payload-types";
 import { Access, CollectionConfig } from "payload/types";
-import { v2 as cloudinary } from 'cloudinary';
 import  { BeforeChangeHook } from "payload/dist/collections/config/types";
-import fs from 'fs';
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
-  api_key: process.env.CLOUDINARY_API_KEY!,
-  api_secret: process.env.CLOUDINARY_API_SECRET!,
-});
 
 
-
-
-const uploadToCloudinary: BeforeChangeHook = async ({ data }: { data: any }) => {
-  if (data.file && data.file.path) {
-    const result = await cloudinary.uploader.upload(data.file.path, {
-      folder: 'media',
-    });
-   
-    try { fs.unlinkSync(data.file.path); } catch {}
-    return {
-      ...data,
-      url: result.secure_url,
-      filename: result.public_id,
-      mimeType: result.format,
-      filesize: result.bytes,
-    };
+const uploadToCloudinaryHook: BeforeChangeHook = async ({ data }) => {
+  if (data.file?.path) {
+    const { uploadToCloudinary } = await import('../lib/uploadToCloudinary'); // server-only
+    const uploaded = await uploadToCloudinary(data.file.path);
+    return { ...data, ...uploaded };
   }
   return data;
 };
-
 
 const isAdminOrHasAccessToImages = (): Access => async ({
   req
@@ -52,7 +32,7 @@ const isAdminOrHasAccessToImages = (): Access => async ({
 export const Media: CollectionConfig = {
   slug: "media",
   hooks: {
-    beforeChange: [uploadToCloudinary,
+    beforeChange: [uploadToCloudinaryHook,
       ({ req, data }) => {
         return { ...data, user: req.user.id };
       },
